@@ -12,20 +12,27 @@ print("Dataset Loaded Successfully")
 print(dataset.head())
 
 # preprocessing
-from sklearn.preprocessing import LabelEncoder
-le= LabelEncoder()
+performance_map = {
+    "Poor": 0,
+    "Below Average": 1,
+    "Average": 2,
+    "Good": 3,
+    "Excellent": 4
+}
 
-for col in dataset.columns:
-    if dataset[col].dtype=='object':
-        dataset[col]=le.fit_transform(dataset[col])
+dataset["Academic Performance"] = dataset["Academic Performance"].map(performance_map)
 
 print("\nData Types after encoding:")
 print(dataset.dtypes)
 
+#feature selection
+features = ["Sleep Hours", "Study Hours", "Stress Level"]
+X = dataset[features]
+y = dataset["Academic Performance"]
+
 # Splitting the dataset into training set and testing set
-X = dataset.iloc[:, [3, 6, 7, 10, 11, 12, 13]]
-y = dataset.iloc[:, 14]
 from sklearn.model_selection import train_test_split
+
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, random_state=42
 )
