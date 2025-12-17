@@ -21,13 +21,13 @@ print(dataset.columns)
 
 
 # Column Names 
-sleep_col = "On average, how many hours of sleep do you get on a typical day?"
+sleep_col = "4. On average, how many hours of sleep do you get on a typical day?"
 fatigue_col = (
-    "How often do you feel fatigued during the day, affecting your ability to study or attend classes?"
+    "8. How often do you feel fatigued during the day, affecting your ability to study or attend classes?"
 )
-stress_col = "How would you describe your stress levels related to academic workload?"
+stress_col = "14. How would you describe your stress levels related to academic workload?"
 performance_col = (
-    "How would you rate your overall academic performance (GPA or grades) in the past semester?"
+    "15. How would you rate your overall academic performance (GPA or grades) in the past semester?"
 )
 
 # Ordinal Encoding Maps
