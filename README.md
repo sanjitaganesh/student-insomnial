@@ -1,75 +1,53 @@
-# Student Insomnia & Academic Performance – ML Analysis
+# How Much Do I Study and How Much Do I Sleep?
 
-This beginner machine-learning project analyzes how sleep habits, stress levels, caffeine intake, device usage, exercise patterns, and fatigue impact academic performance in students.
+This project analyzes whether students can compensate for lack of sleep with increased study hours, or if sleep deprivation negatively impacts academic performance.
 
-The goal is to practice a full end-to-end ML workflow:
-- Data cleaning & preprocessing
-- Encoding categorical data
-- Feature scaling
-- Train/test splitting
-- Model training
-- Evaluation
-- Simple EDA visualization
+Using the *Student Insomnia and Educational Outcomes* dataset, a regression model is built to predict academic performance based on sleep-related factors.
 
 ---
 
-## Dataset
+## Key Idea
 
-Source: Mendeley Data  
-**Student Insomnia and Educational Outcomes Dataset (Version 2)**
+Survey responses are **ordinal**, not numerical.  
+Instead of forcing classification, the labels are converted into ordered values and treated as an **ordinal regression** problem.
 
-Each record represents a student survey with features related to sleep patterns and academic outcomes.
+Example:
+Excellent = 4
+Good = 3
+Average = 2
+Below Average = 1
+Poor = 0
 
 ---
 
 ## Features Used
 
-- SleepHours  
-- ConcentrationIssues  
-- Fatigue  
-- DeviceUsage  
-- Caffeine  
-- Exercise  
-- Stress  
+- Average sleep hours per day  
+- Daytime fatigue frequency  
+- Academic stress level  
 
-**Target Variable:**
-
-- AcademicPerformance
+Target:
+- Overall academic performance
 
 ---
 
-## Technologies Used
+## Methodology
 
-- Python
-- NumPy
-- Pandas
-- Matplotlib
-- scikit-learn
-
----
-
-## Machine Learning Model
-
-**Algorithm:** Linear Regression
-
-**Preprocessing steps:**
-
-- Encoded all categorical columns using LabelEncoder
-- Standardized input features using StandardScaler
-- Split dataset into:
-  - 80% training
-  - 20% testing
+- Ordinal encoding of survey responses  
+- Exploratory Data Analysis to observe trends  
+- Linear Regression model  
+- Evaluation using R² and Mean Absolute Error (MAE)
 
 ---
 
-## Model Evaluation
+## Results
+R² Score: 0.132
+MAE: 0.617
+Sleep and stress have a measurable effect, but they do **not fully explain** academic performance — suggesting all-nighters are neither a miracle nor the sole deciding factor.
 
-Metrics used:
+---
 
-- **R² Score**
-- **Mean Absolute Error (MAE)**
+## Conclusion
 
-Example output:
-```text
-R² Score: 0.173
-MAE: 0.508
+More study hours cannot reliably compensate for chronic sleep deprivation.  
+Sleep quality and stress management play a meaningful but limited role in academic outcomes.
