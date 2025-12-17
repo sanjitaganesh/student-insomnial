@@ -65,11 +65,10 @@ frequency_map = {
 }
 
 stress_map = {
-    "Very Low": 0,
-    "Low": 1,
-    "Moderate": 2,
-    "High": 3,
-    "Very High": 4
+    "No stress": 0,
+    "Low stress": 1,
+    "High stress": 2,
+    "Extremely high stress": 3
 }
 
 performance_map = {
