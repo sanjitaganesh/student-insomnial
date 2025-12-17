@@ -12,11 +12,11 @@ Survey responses are **ordinal**, not numerical.
 Instead of forcing classification, the labels are converted into ordered values and treated as an **ordinal regression** problem.
 
 Example:
--Excellent = 4
--Good = 3
--Average = 2
--Below Average = 1
--Poor = 0
+- Excellent = 4
+- Good = 3
+- Average = 2
+- Below Average = 1
+- Poor = 0
 
 ---
 
@@ -41,8 +41,8 @@ Target:
 ---
 
 ## Results
--R² Score: 0.132
--MAE: 0.617
+- R² Score: 0.132
+- MAE: 0.617
 Sleep and stress have a measurable effect, but they do **not fully explain** academic performance — suggesting all-nighters are neither a miracle nor the sole deciding factor.
 
 ---
